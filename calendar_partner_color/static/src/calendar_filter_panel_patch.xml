@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
 
-    <t t-name="calendar_partner_color.PartnerColorPickerPopover">
+    <t t-name="calendar_color_partner.PartnerColorPickerPopover">
         <div class="o_partner_color_picker p-2">
             <ColorList
                 colors="props.colors"

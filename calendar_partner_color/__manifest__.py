@@ -1,10 +1,10 @@
 {
-    'name': 'Calendar Partner Colors',
+    'name': 'Calendar color partners',
     'version': '18.0.1.0.0',
     'category': 'Productivity/Calendar',
     'summary': 'Pick the color of every calendar attendee in one click.',
     'description': """
-Calendar Partner Colors
+Calendar color partners
 =======================
 
 In Odoo the color of a calendar attendee is computed
@@ -29,7 +29,7 @@ Pure frontend patch (no Python override, no extra column).
     'data': [],
     'assets': {
         'web.assets_backend': [
-            'calendar_partner_color/static/src/**/*',
+            'calendar_color_partner/static/src/**/*',
         ],
     },
     'images': [

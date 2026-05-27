@@ -1,4 +1,4 @@
-# Calendar Partner Colors
+# Calendar color partners
 
 Pick the color of every calendar attendee in one click, in Odoo 18.
 
@@ -24,7 +24,7 @@ Python override, no extra database column.
 
 1. Drop the module in your addons path.
 2. Update the apps list.
-3. Install **Calendar Partner Colors**.
+3. Install **Calendar color partners**.
 
 ## Use
 

@@ -6,7 +6,7 @@ import { _t } from "@web/core/l10n/translation";
 import { Component } from "@odoo/owl";
 
 class PartnerColorPickerPopover extends Component {
-    static template = "calendar_partner_color.PartnerColorPickerPopover";
+    static template = "calendar_color_partner.PartnerColorPickerPopover";
     static components = { ColorList };
     static props = {
         colors: Array,

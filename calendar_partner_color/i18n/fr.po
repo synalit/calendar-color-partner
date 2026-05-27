@@ -1,7 +1,7 @@
-# French translation for calendar_partner_color.
+# French translation for calendar_color_partner.
 # Copyright (C) Synalit
 # This file is distributed under the same license as the
-# calendar_partner_color module.
+# calendar_color_partner module.
 #
 msgid ""
 msgstr ""
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#. module: calendar_partner_color
+#. module: calendar_color_partner
 #. odoo-javascript
-#: code:addons/calendar_partner_color/static/src/calendar_filter_panel_patch.js:0
+#: code:addons/calendar_color_partner/static/src/calendar_filter_panel_patch.js:0
 msgid "Pick a color"
 msgstr "Choisir la couleur"
