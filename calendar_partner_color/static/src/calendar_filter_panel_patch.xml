@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="calendar_partner_color.PartnerColorPickerPopover">
+        <div class="o_partner_color_picker p-2">
+            <ColorList
+                colors="props.colors"
+                forceExpanded="true"
+                selectedColor="props.selectedColor"
+                onColorSelected="(id) => this.props.onColorSelected(id)"
+            />
+        </div>
+    </t>
+
+    <t t-inherit="web.CalendarFilterPanel.filter" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('o_calendar_filter_item')]" position="inside">
+            <t t-if="canPickColor(section, filter)">
+                <button
+                    type="button"
+                    class="o_partner_color_btn btn position-absolute top-50 py-0 px-1"
+                    t-att-class="'o_colorlist_item_color_' + (filter.colorIndex || 0)"
+                    t-att-title="partnerColorPickerTitle"
+                    t-on-click="(ev) => this.onPartnerColorClick(section, filter, ev)"
+                />
+            </t>
+        </xpath>
+    </t>
+
+</templates>

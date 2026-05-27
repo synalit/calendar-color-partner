@@ -1,0 +1,23 @@
+.o_calendar_filter_item {
+    .o_partner_color_btn {
+        right: 1.75rem;
+        width: 14px;
+        height: 14px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 3px;
+        opacity: 0;
+        transform: translateY(-50%);
+        transition: opacity 0.15s ease-in-out;
+    }
+
+    &:hover .o_partner_color_btn,
+    .o_partner_color_btn:focus {
+        opacity: 1;
+    }
+}
+
+.o_partner_color_picker {
+    .o_colorlist {
+        max-width: 180px;
+    }
+}
