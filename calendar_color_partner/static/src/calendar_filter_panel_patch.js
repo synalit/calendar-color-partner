@@ -1,7 +1,7 @@
 import { patch } from "@web/core/utils/patch";
 import { usePopover } from "@web/core/popover/popover_hook";
 import { ColorList } from "@web/core/colorlist/colorlist";
-import { CalendarFilterPanel } from "@web/views/calendar/filter_panel/calendar_filter_panel";
+import { CalendarFilterSection } from "@web/views/calendar/calendar_filter_section/calendar_filter_section";
 import { _t } from "@web/core/l10n/translation";
 import { Component } from "@odoo/owl";
 
@@ -16,7 +16,7 @@ class PartnerColorPickerPopover extends Component {
     };
 }
 
-patch(CalendarFilterPanel.prototype, {
+patch(CalendarFilterSection.prototype, {
     setup() {
         super.setup(...arguments);
         this.colorPickerPopover = usePopover(PartnerColorPickerPopover);
@@ -26,23 +26,23 @@ patch(CalendarFilterPanel.prototype, {
         return _t("Pick a color");
     },
 
-    isPartnerSection(section) {
-        const field = this.props.model.fields[section.fieldName];
+    isPartnerSection() {
+        const field = this.props.model.fields[this.section.fieldName];
         return field && field.relation === "res.partner";
     },
 
-    canPickColor(section, filter) {
+    canPickColor(filter) {
         return (
-            this.isPartnerSection(section) &&
+            this.isPartnerSection() &&
             filter.type !== "all" &&
             !!filter.value
         );
     },
 
-    onPartnerColorClick(section, filter, ev) {
+    onPartnerColorClick(filter, ev) {
         ev.preventDefault();
         ev.stopPropagation();
-        if (!this.canPickColor(section, filter)) {
+        if (!this.canPickColor(filter)) {
             return;
         }
         if (this.colorPickerPopover.isOpen) {

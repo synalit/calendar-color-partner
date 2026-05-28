@@ -1,6 +1,6 @@
 {
     'name': 'Calendar color partners',
-    'version': '18.0.1.0.0',
+    'version': '19.0.1.0.0',
     'category': 'Productivity/Calendar',
     'summary': 'Pick the color of every calendar attendee in one click.',
     'description': """
@@ -33,7 +33,7 @@ Pure frontend patch (no Python override, no extra column).
         ],
     },
     'images': [
-        'static/description/icon.png',
+        'static/description/after.png',
     ],
     'installable': True,
     'application': False,

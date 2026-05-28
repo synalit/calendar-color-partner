@@ -12,15 +12,15 @@
         </div>
     </t>
 
-    <t t-inherit="web.CalendarFilterPanel.filter" t-inherit-mode="extension">
+    <t t-inherit="web.CalendarFilterSection.filter" t-inherit-mode="extension">
         <xpath expr="//div[hasclass('o_calendar_filter_item')]" position="inside">
-            <t t-if="canPickColor(section, filter)">
+            <t t-if="canPickColor(filter)">
                 <button
                     type="button"
                     class="o_partner_color_btn btn position-absolute top-50 py-0 px-1"
                     t-att-class="'o_colorlist_item_color_' + (filter.colorIndex || 0)"
                     t-att-title="partnerColorPickerTitle"
-                    t-on-click="(ev) => this.onPartnerColorClick(section, filter, ev)"
+                    t-on-click="(ev) => this.onPartnerColorClick(filter, ev)"
                 />
             </t>
         </xpath>
